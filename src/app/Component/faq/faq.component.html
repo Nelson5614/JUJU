@@ -1,0 +1,50 @@
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- FAQ List -->
+        <div class="space-y-6">
+          <h2 class="text-4xl font-bold text-[#063b77]">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Discover quick answers to common queries about our micro-finance services
+            and how we can help grow your business
+          </p>
+  
+          <div class="w-full space-y-4">
+            <div *ngFor="let faq of faqs; let i = index" class="border rounded-lg px-6 py-2">
+              <div (click)="toggleAccordion(i)" class="text-lg font-medium text-[#063b77] hover:text-[#fbba08] cursor-pointer">
+                {{ faq.question }}
+              </div>
+              <div *ngIf="activeIndex === i" class="text-gray-600 mt-2">
+                {{ faq.answer }}
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Contact Card -->
+        <div class="bg-[#fff9e6] rounded-2xl p-8 lg:p-12">
+          <div class="flex justify-end mb-6">
+            <div class="flex -space-x-2">
+              <div class="w-12 h-12 bg-[#fbba08] rounded-full"></div>
+              <div class="w-12 h-12 bg-[#063b77] rounded-full"></div>
+            </div>
+          </div>
+          
+          <h3 class="text-3xl font-bold text-[#063b77] mb-4">
+            You have different Questions?
+          </h3>
+          
+          <p class="text-gray-600 mb-8">
+            Our financial advisors are here to help. Get personalized answers to your 
+            questions about micro-loans, savings, and business growth.
+          </p>
+  
+          <button class="w-full bg-[#063b77] text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#fbba08] hover:text-[#063b77] transition-colors duration-300">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>

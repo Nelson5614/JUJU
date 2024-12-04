@@ -1,0 +1,41 @@
+<header class="bg-white shadow-md fixed w-full z-10">
+  <nav class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center ml-8">
+        <img src="assets/logo.jpg" alt="JUJU FINANCIAL Logo" class="h-16 w-auto" />
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button (click)="toggleMobileMenu()" class="text-[#063b77] focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex space-x-6">
+        <a routerLink="/" class="text-[#063b77] hover:text-[#fbba08]">Home</a>
+        <a routerLink="/about" class="text-[#063b77] hover:text-[#fbba08]">About</a>
+        <a routerLink="/contact" class="text-[#063b77] hover:text-[#fbba08]">Contact</a>
+      </div>
+
+      <!-- Get Started Button -->
+      <button class="hidden md:block bg-[#fbba08] text-[#063b77] px-4 py-2 rounded-full font-semibold hover:bg-[#063b77] hover:text-white transition duration-300">
+        Get Started
+      </button>
+    </div>
+
+    <!-- Mobile Menu Links -->
+    <div [ngClass]="{'hidden': !isMobileMenuOpen}" class="md:hidden flex flex-col space-y-2 mt-4">
+      <a routerLink="/" class="text-[#063b77] hover:text-[#fbba08]">Home</a>
+      <a routerLink="/about" class="text-[#063b77] hover:text-[#fbba08]">About</a>
+      <a routerLink="/contact" class="text-[#063b77] hover:text-[#fbba08]">Contact</a>
+      <button class="bg-[#fbba08] text-[#063b77] px-4 py-2 rounded-full font-semibold hover:bg-[#063b77] hover:text-white transition duration-300">
+        Get Started
+      </button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,47 @@
+<section class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div class="relative">
+          <div class="rounded-3xl overflow-hidden">
+            <img
+              [ngSrc]="teamImage"
+              alt="Team celebrating success"
+              width="400"
+              height="200"
+              class="w-full object-cover"
+            />
+          </div>
+        </div>
+  
+        <div class="space-y-6">
+          <h2 class="text-4xl lg:text-5xl font-bold text-[#063b77]">
+            Unlocking Financial Success Through Deep Understanding of our People
+          </h2>
+          
+          <p class="text-lg text-gray-600">
+            Success in our financial approach goes beyond numbers, focusing on understanding individuals. 
+            Explore a strategy that unlocks prosperity by delving into the intricacies of our people.
+          </p>
+  
+          <button class="bg-[#063b77] text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-[#fbba08] hover:text-[#063b77] transition-colors duration-300">
+            Get Started
+          </button>
+        </div>
+      </div>
+  
+      <!-- Stats Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div *ngFor="let stat of stats" class="text-center">
+          <div class="text-5xl font-bold text-[#063b77] mb-2">
+            {{ stat.value }}
+          </div>
+          <span [ngClass]="stat.className" class="px-4 py-1 rounded-full text-sm font-medium">
+            {{ stat.label }}
+          </span>
+        </div>
+      </div>
+  
+      <!-- Bottom Image -->
+      
+    </div>
+  </section>
